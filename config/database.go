@@ -13,13 +13,20 @@ var DB *gorm.DB
 
 func InitDB() {
 	// dsn Stands for "Data Source Name," a connection string used to connect to the PostgreSQL database.
-	dsn := fmt.Sprintf("host=%s, user=%s, password=%s, dbname=%s, port=%s, sslmode=disable",
+	dsn := fmt.Sprintf(
+		"host=%s user=%s password=%s dbname=%s port=%s sslmode=disable",
 		os.Getenv("DB_HOST"),
 		os.Getenv("DB_USER"),
 		os.Getenv("DB_PASS"),
 		os.Getenv("DB_NAME"),
 		os.Getenv("DB_PORT"),
 	)
+
+	log.Println("DB_HOST:", os.Getenv("DB_HOST"))
+	log.Println("DB_USER:", os.Getenv("DB_USER"))
+	log.Println("DB_PASS:", os.Getenv("DB_PASS"))
+	log.Println("DB_NAME:", os.Getenv("DB_NAME"))
+	log.Println("DB_PORT:", os.Getenv("DB_PORT"))
 
 	/*
 		- gorm.Open(...): Opens a connection to the database using the PostgreSQL driver.
