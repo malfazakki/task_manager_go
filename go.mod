@@ -4,7 +4,6 @@ go 1.22.6
 
 require (
 	gorm.io/driver/postgres v1.5.11
-	// github.com/golang-jwt/jwt/v4 v4.5.1 // indirect
 	gorm.io/gorm v1.25.12
 )
 
@@ -23,6 +22,7 @@ require (
 )
 
 require (
+	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/labstack/gommon v0.4.2 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
