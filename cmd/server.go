@@ -29,6 +29,7 @@ func main() {
 	authHandler := handler.NewAuthHandler(authUsecase)
 
 	e.POST("/register", authHandler.Register)
+	e.POST("/login", authHandler.Login)
 
 	e.Logger.Fatal(e.Start(":8080"))
 }
